@@ -1,0 +1,120 @@
+include blocks/head-service/head
+
+
+body
+	.container-external
+		section.section-header
+			header
+				nav.nav
+					ul.menu-list
+						li.menu-item
+							a(href="#", class="menu-link") SEARCH TICKETS
+						li.menu-item
+							a(href="#", class="menu-link") SAPSAN
+						li.menu-item
+							a(href="#", class="menu-link") ALLEGRO
+						li.menu-item
+							a(href="#", class="menu-link menu-link__toggle") TRANS-SIBERIAN
+							ul.submenu
+								li.submenu-item
+									a(href="#", class="submenu-link") Group travel
+								li.submenu-item
+									a(href="#", class="submenu-link") Ticket types
+								li.submenu-item
+									a(href="#", class="submenu-link") Child policy
+								li.submenu-item
+									a(href="#", class="submenu-link") Change ticket request
+								li.submenu-item
+									a(href="#", class="submenu-link") Cancel tickets
+						li.menu-item
+							a(href="#", class="menu-link menu-link__toggle") FAQ
+							ul.submenu
+								li.submenu-item
+									a(href="#", class="submenu-link") Group travel
+								li.submenu-item
+									a(href="#", class="submenu-link") Ticket types
+								li.submenu-item
+									a(href="#", class="submenu-link") Child policy
+								li.submenu-item
+									a(href="#", class="submenu-link") Change ticket request
+								li.submenu-item
+									a(href="#", class="submenu-link") Cancel tickets
+						li.menu-item
+							a(href="#", class="menu-link menu-link__toggle") TICKETS GUIDE
+							ul.submenu
+								li.submenu-item
+									a(href="#", class="submenu-link") Group travel
+								li.submenu-item
+									a(href="#", class="submenu-link") Ticket types
+								li.submenu-item
+									a(href="#", class="submenu-link") Child policy
+								li.submenu-item
+									a(href="#", class="submenu-link") Change ticket request
+								li.submenu-item
+									a(href="#", class="submenu-link") Cancel tickets
+						li.menu-item
+							a(href="#", class="menu-link menu-link__toggle") CONTACT US
+							ul.submenu
+								li.submenu-item
+									a(href="#", class="submenu-link") Group travel
+								li.submenu-item
+									a(href="#", class="submenu-link") Ticket types
+								li.submenu-item
+									a(href="#", class="submenu-link") Child policy
+								li.submenu-item
+									a(href="#", class="submenu-link") Change ticket request
+								li.submenu-item
+									a(href="#", class="submenu-link") Cancel tickets
+					a(href="#", class="account") Sign In
+				.mob-nav
+					span.mob-nav__item
+					span.mob-nav__item
+					span.mob-nav__item
+		section.section-content
+			h1.title
+				|Russian Train Tickets
+			form(action="/", class="form")
+				.row.row-top
+					.fl.departure
+						label(for="departure-city-input", class="departure-label") Departure city:
+						input(type="text", id="departure-city-input" class="departure-input", placeholder="Type city name")
+						span(class="departure-span") Ex: 
+						a(href="#", class="departure-link") St. Petersburg, 
+						a(href="#" class="departure-link") Moscow
+					.fl.switch
+						a(href="#", class="switch-link")
+							img(src="img/switch-pictrure.png", alt="Поменять")
+					.fr.arrival
+						label(for="arrival-input" class="arrival-label") Arrival city:
+						input(type="text", id="arrival-input" class="arrival-input", placeholder="Type city name")
+						span(class="arrival-span") Ex: 
+						a(href="#", class="arrival-link") St. Petersburg, 
+						a(href="#" class="arrival-link") Moscow
+
+				.row.row-bottom
+					.fl.departure.departure-date
+						label(for="departure-date-input", class="departure-label") Departure date:
+						input(type="text", id="departure-date-input" class="departure-input departure-input--date", placeholder="dd.mm.yy")
+					.fl.roundtrip-wrapper
+						.roundtrip#js-roundtrip
+							input(type="checkbox", id="roundtrip", class="roundtrip-input")
+							label(for="roundtrip", class="roundtrip-label") Roundtrip
+					.fl.departure.return
+						label(for="return-date-input", class="departure-label") Return date:
+						input(type="text", id="return-date-input" class="departure-input departure-input--date return-input", placeholder="dd.mm.yy" disabled)
+					.fl.currency-wrapper
+						label(for="departure-date-input", class="departure-label") Currency
+						.custom-select
+							select(name="custom-select")
+								option(value="0") rub
+								option(value="1") usd
+								option(value="2") gbr
+								option(value="3") eur
+								option(value="4") chf
+					.fr.search-wrapper
+						a(href="#", class="search-button")
+							span Search
+
+
+
+	include blocks/footer-service/footer-service

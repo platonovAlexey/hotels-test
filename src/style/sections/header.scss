@@ -1,0 +1,123 @@
+.menu{
+	&-list{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		font-size: 0;
+		@include clearfix;
+		float: left;
+	}
+	&-item{
+		display: inline-block;
+		position: relative;
+		&:hover .submenu{
+			display: block;
+		}
+	}
+	&-link{
+		color: #fff;
+		display: block;
+		font-size: 13px;
+		font-weight: bold;
+		padding: 8px 20px 11px 10px;
+		line-height: 21px;
+		font-weight: bold;
+		text-decoration: none;
+		text-transform: uppercase;
+		position: relative;
+		&:hover{
+			text-decoration: none;
+			color: #fff;
+			background: #f75c00;
+		}
+		&__toggle{
+			&--active{
+				background: #f75c00;
+			}
+			&:after{
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				border: 5px solid transparent;
+				border-bottom: none;
+				border-top-color: #fff;
+				position: absolute;
+				top: 15px;
+				right: 5px;
+
+			}
+		}
+	}
+}
+
+.submenu{
+	display: none;
+	position: absolute;
+	z-index: 100;
+	width: 160px;
+	top: 40px;
+	left: 0;
+	background-color: #fff;
+	border: 1px solid #d7d7d7;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	&-item{
+		display: block;
+
+		&:last-child a{
+			border: none;
+		}
+
+	}
+	&-link{
+		display: block;
+		color: #000000;
+		text-decoration: none;
+		font-size: 14px;
+		padding: 11px 2px 11px 12px;
+		text-align: left;
+		border-bottom: 1px solid #d7d7d7;
+		&:hover{
+			text-decoration: none;
+			background: #bfd8eb;
+			color: #000000;
+			border-bottom: 1px solid #bfd8eb;
+		}
+	}
+}
+
+.account{
+	font-size: 14px;
+	color: #a8d5eb;
+	float: right;
+	text-align: right;
+	line-height: 21px;
+	text-decoration: underline;
+	padding: 8px 0px 11px 0px;
+	position: relative;
+	&:after{
+		content: ' ';
+		display: block;
+		position: absolute;
+		top: 12px;
+		left: -22px;
+		width: 12px;
+		height: 15px;
+		background: url('../img/signin-inactive.png') no-repeat;
+	}
+	&:hover{
+		text-decoration: none;
+		color: #fff;
+
+		&:after{
+			background: url('../img/signin-active.png') no-repeat;
+		}
+	}
+	
+}
+
+.mob-nav{
+	display: none;
+}

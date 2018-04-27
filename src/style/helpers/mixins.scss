@@ -1,0 +1,52 @@
+@mixin clearfix{
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after{
+		clear: both;
+	}
+}
+
+@mixin absolute__center{
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+}
+
+@mixin clean {
+	margin: 0;
+	padding: 0;
+}
+
+// Красивое обрезание лишнего текста
+@mixin text-overflow{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+// Скрытие текста у блока
+@mixin hide-text {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+}
+
+// Центрирование по горизонтали
+@mixin center{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// Центрирование абсолютно позиционированного элемента по вертикали
+@mixin absolute-center{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
